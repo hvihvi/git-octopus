@@ -3,6 +3,7 @@ cat <<EOF
 usage: git octopus [options] [<pattern>...]
 
     -n     leaves the repository back to HEAD
+    -c     commit the octopus in repository (default)
     -v     prints the version of git-octopus
 EOF
 exit
@@ -40,6 +41,9 @@ while getopts "nhv" opt; do
       ;;
     n)
       doCommit=false
+      ;;
+    c)
+      doCommit=true
       ;;
     v)
       echo "1.1"
