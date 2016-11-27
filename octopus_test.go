@@ -1,15 +1,13 @@
 package main
 
-import "testing"
+import (
+	"testing"
+	"github.com/stretchr/testify/assert"
+)
 
-// TODO : grab a test lib
 func TestInitFlags(t *testing.T) {
 	pattern, repository := InitFlags()
-	if *pattern != "" {
-		t.Error("flag -pattern should default to \"\"")
-	}
-	if *repository != "." {
-		t.Error("flag -repository should default to \".\"")
-	}
+	assert.Equal(t, "", *pattern)
+	assert.Equal(t, ".", *repository)
 }
 
