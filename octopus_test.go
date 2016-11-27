@@ -5,8 +5,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestInitFlags(t *testing.T) {
-	pattern, repository := InitFlags()
+func TestFlags(t *testing.T) {
 	assert.Equal(t, "", *pattern)
 	assert.Equal(t, ".", *repository)
 }

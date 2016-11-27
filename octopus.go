@@ -7,8 +7,13 @@ import (
 	"flag"
 )
 
+// Command-Line flags.
+var (
+	pattern = flag.String("pattern", "", "Branch naming pattern")
+	repository = flag.String("repository", ".", "Repository name")
+)
+
 func main() {
-	pattern, repository := InitFlags()
 	flag.Parse()
 
 	lsRemoteCmd := exec.Command("git", "ls-remote", *repository, *pattern)
@@ -17,10 +22,4 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("%s", branchList)
-}
-
-func InitFlags() (*string, *string) {
-	pattern := flag.String("pattern", "", "Branch naming pattern")
-	repository := flag.String("repository", ".", "Repository name")
-	return pattern, repository
 }
