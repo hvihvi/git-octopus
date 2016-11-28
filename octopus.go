@@ -1,15 +1,15 @@
 package main
 
 import (
-	"fmt"
-	"os/exec"
-	"log"
 	"flag"
+	"fmt"
+	"log"
+	"os/exec"
 )
 
 // Command-Line flags.
 var (
-	pattern = flag.String("pattern", "", "Branch naming pattern")
+	pattern    = flag.String("pattern", "", "Branch naming pattern")
 	repository = flag.String("repository", ".", "Repository name")
 )
 
