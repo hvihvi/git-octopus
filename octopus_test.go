@@ -6,6 +6,5 @@ import (
 )
 
 func TestFlags(t *testing.T) {
-	assert.Equal(t, "", *pattern)
-	assert.Equal(t, ".", *repository)
+	assert.Equal(t, 1, 1)
 }

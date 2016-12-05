@@ -1,25 +1,21 @@
 package main
 
 import (
-	"flag"
 	"fmt"
-	"log"
-	"os/exec"
-)
-
-// Command-Line flags.
-var (
-	pattern    = flag.String("pattern", "", "Branch naming pattern")
-	repository = flag.String("repository", ".", "Repository name")
+	"github.com/libgit2/git2go"
+	"os"
 )
 
 func main() {
-	flag.Parse()
-
-	lsRemoteCmd := exec.Command("git", "ls-remote", *repository, *pattern)
-	branchList, err := lsRemoteCmd.Output()
+	repo, err := git.OpenRepository(".")
 	if err != nil {
-		log.Fatal(err)
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
-	fmt.Printf("%s", branchList)
+
+	if repo.IsBare() {
+		fmt.Println("Yep, it's bare.")
+	} else {
+		fmt.Println("Nope. Not a bare repo.")
+	}
 }
