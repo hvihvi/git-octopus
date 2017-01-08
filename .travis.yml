@@ -1,3 +1,5 @@
 language: go
 script:
+        - git config --global user.name travis
+        - git config --global user.email travis@ci.com
         - go test -v -cover ./...
