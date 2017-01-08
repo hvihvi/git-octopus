@@ -3,7 +3,7 @@ package config
 import (
 	"errors"
 	"flag"
-	"github.com/lesfurets/git-octopus/git"
+	"github.com/hvihvi/git-octopus/git"
 	"strconv"
 	"strings"
 )

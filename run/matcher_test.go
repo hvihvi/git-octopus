@@ -2,8 +2,8 @@ package run
 
 import (
 	"bytes"
-	"github.com/lesfurets/git-octopus/git"
-	"github.com/lesfurets/git-octopus/test"
+	"github.com/hvihvi/git-octopus/git"
+	"github.com/hvihvi/git-octopus/test"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

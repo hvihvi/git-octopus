@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/lesfurets/git-octopus/git"
+	"github.com/hvihvi/git-octopus/git"
 	"io/ioutil"
 	"os"
 )

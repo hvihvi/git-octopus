@@ -3,9 +3,9 @@ package run
 import (
 	"bytes"
 	"errors"
-	"github.com/lesfurets/git-octopus/config"
-	"github.com/lesfurets/git-octopus/git"
-	"github.com/lesfurets/git-octopus/test"
+	"github.com/hvihvi/git-octopus/config"
+	"github.com/hvihvi/git-octopus/git"
+	"github.com/hvihvi/git-octopus/test"
 	"log"
 )
 

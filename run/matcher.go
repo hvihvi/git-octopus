@@ -3,7 +3,7 @@ package run
 import (
 	"bytes"
 	"fmt"
-	"github.com/lesfurets/git-octopus/git"
+	"github.com/hvihvi/git-octopus/git"
 	"log"
 	"strings"
 )

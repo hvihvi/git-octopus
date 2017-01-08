@@ -1,8 +1,8 @@
 package functionnal_tests
 
 import (
-	"github.com/lesfurets/git-octopus/run"
-	"github.com/lesfurets/git-octopus/test"
+	"github.com/hvihvi/git-octopus/run"
+	"github.com/hvihvi/git-octopus/test"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
