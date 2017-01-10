@@ -5,16 +5,17 @@ import (
 	"github.com/hvihvi/git-octopus/run"
 	"log"
 	"os"
+
 	"os/signal"
 )
 
 func main() {
-	repo := git.Repository{Path: "."}
+	repo   := git.Repository{Path: "."}
 
 	context := run.OctopusContext{
 		Repo:   &repo,
 		Logger: log.New(os.Stdout, "", 0),
-	}
+			}
 
 	signalChan := make(chan os.Signal, 1)
 	signal.Notify(signalChan, os.Interrupt, os.Kill)
